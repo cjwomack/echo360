@@ -549,7 +549,9 @@ class EchoCloudVideo(EchoVideo):
                 return video_json["groupInfo"]["createdAt"]
             if video_json["groupInfo"]["u'updatedAt'"] is not None:
                 return video_json["groupInfo"]["u'updatedAt'"]
-
+            
+        if "timing" in video_json["lesson"] and "start" in video_json["lesson"]["timing"]:
+            return video_json["lesson"]["timing"]["start"]
         if "startTimeUTC" in video_json["lesson"]:
             if video_json["lesson"]["startTimeUTC"] is not None:
                 return video_json["lesson"]["startTimeUTC"]
