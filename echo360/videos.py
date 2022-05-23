@@ -29,6 +29,7 @@ def update_course_retrieval_progress(current, total):
     sys.stdout.write(text)
     sys.stdout.flush()
 
+    
 
 class EchoVideos(object):
     def __init__(self, videos_json, driver):
